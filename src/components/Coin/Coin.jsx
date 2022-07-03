@@ -22,7 +22,7 @@ const Coin = ({
         </div>
         <div className={styles.coinData}>
           <p className={styles.coinPrice}>$ {price}</p>
-          <p className={styles.coinVolume}>$ {volume.toLocaleString()} RUB</p>
+          <p className={styles.coinVolume}>$ {volume.toLocaleString()}</p>
           {priceChange < 0 ? (
             <p className={styles.coinPercentRed}> <KeyboardArrowDownIcon/>{priceChange.toFixed(2)}% </p>
           ) : (
