@@ -1,0 +1,114 @@
+@import "../../scss/variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    &:before,
+    &:after {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+#root {
+    height: 100%;
+}
+
+body {
+    background: #485563; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #29323c, #485563); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #29323c,
+        #485563
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-size: 16px;
+    min-width: 320px;
+    position: relative;
+    line-height: 1.65;
+    font-family: $default-font;
+    overflow-x: hidden;
+    opacity: 1;
+
+    margin: 0px;
+    padding: 30px;
+    color: #fff;
+}
+
+.coinSearch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    > form > .coinInput {
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        background: #606c88; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #3f4c6b, #606c88); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+            to right,
+            #3f4c6b,
+            #606c88
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color: $white;
+        &::placeholder{
+            color: $white;
+        }
+
+    }
+}
+
+.coinContainer {
+    display: flex;
+    justify-content: center;
+    .coinRow {
+        text-align: center;
+        width: 1200px;
+        border-bottom: 1px solid #ccc;
+        gap: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        > .coin {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 30px;
+            > img {
+                height: 50px;
+                width: 50px;
+            }
+        }
+
+        > .coinData {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 50px;
+
+            > .coinPercentRed {
+                display: flex;
+                align-items: center;
+                color: $red;
+            }
+            > .coinPercentGreen {
+                display: flex;
+                align-items: center;
+                color: $green;
+            }
+        }
+    }
+}
